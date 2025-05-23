@@ -1,0 +1,12 @@
+public class Main {
+	public static void main(String[] args) {
+		String str="aba";
+       String nstr=new StringBuilder(str).reverse().toString();
+	  if(nstr.equals(str)){
+	  	System.out.println("Given String Palindrome");
+	  }
+		else{
+			System.out.println("Given String Not Palindrome");
+		}
+	}
+}

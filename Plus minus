@@ -1,0 +1,30 @@
+import java.util.*;
+
+public class Solution {
+    public static void plusMinus(int[] arr) {
+        int total = arr.length;
+        int pos = 0, neg = 0, zero = 0;
+
+        for (int num : arr) {
+            if (num > 0) pos++;
+            else if (num < 0) neg++;
+            else zero++;
+        }
+        System.out.printf("%.6f\n",(double) pos/total);
+        System.out.printf("%.6f\n", (double) neg / total);
+        System.out.printf("%.6f\n", (double) zero / total);
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int n = scanner.nextInt();
+        int[] arr = new int[n];
+
+        for (int i = 0; i < n; i++) {
+            arr[i] = scanner.nextInt();
+        }
+
+        plusMinus(arr);
+        scanner.close();
+    }
+}
